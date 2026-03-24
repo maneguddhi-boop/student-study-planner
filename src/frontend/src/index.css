@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Light mode - main content area */
+    --background: 0.975 0.005 250;
+    --foreground: 0.18 0.03 260;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.03 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.03 260;
+    --primary: 0.52 0.22 255;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.94 0.015 255;
+    --secondary-foreground: 0.25 0.05 260;
+    --muted: 0.94 0.008 250;
+    --muted-foreground: 0.52 0.02 255;
+    --accent: 0.94 0.015 255;
+    --accent-foreground: 0.25 0.05 260;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.015 255;
+    --input: 0.88 0.015 255;
+    --ring: 0.52 0.22 255;
+    --chart-1: 0.52 0.22 255;
+    --chart-2: 0.62 0.2 145;
+    --chart-3: 0.58 0.2 295;
+    --chart-4: 0.72 0.18 55;
+    --chart-5: 0.65 0.22 20;
+    /* Sidebar - dark navy */
+    --sidebar: 0.2 0.055 260;
+    --sidebar-foreground: 0.9 0.02 255;
+    --sidebar-primary: 0.52 0.22 255;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.27 0.06 260;
+    --sidebar-accent-foreground: 0.95 0.01 255;
+    --sidebar-border: 0.28 0.04 260;
+    --sidebar-ring: 0.52 0.22 255;
+    /* Custom semantic */
+    --success: 0.62 0.2 145;
+    --success-foreground: 0.98 0 0;
+    --warning: 0.72 0.18 55;
+    --warning-foreground: 0.15 0 0;
+    --info: 0.52 0.22 255;
+    --info-foreground: 0.98 0 0;
+    --purple: 0.58 0.2 295;
+    --purple-foreground: 0.98 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .bg-success {
+    background-color: oklch(var(--success));
+  }
+  .text-success {
+    color: oklch(var(--success));
+  }
+  .bg-success\/10 {
+    background-color: oklch(var(--success) / 0.1);
+  }
+  .text-warning {
+    color: oklch(var(--warning));
+  }
+  .bg-warning\/10 {
+    background-color: oklch(var(--warning) / 0.1);
+  }
+  .bg-purple\/10 {
+    background-color: oklch(var(--purple) / 0.1);
+  }
+  .text-purple {
+    color: oklch(var(--purple));
+  }
+  .bg-chart-1\/10 {
+    background-color: oklch(var(--chart-1) / 0.1);
+  }
+  .bg-chart-2\/10 {
+    background-color: oklch(var(--chart-2) / 0.1);
+  }
+  .bg-chart-3\/10 {
+    background-color: oklch(var(--chart-3) / 0.1);
+  }
+  .bg-chart-4\/10 {
+    background-color: oklch(var(--chart-4) / 0.1);
+  }
+}
